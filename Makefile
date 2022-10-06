@@ -2,7 +2,7 @@
 # This file was provisioned by Terraform
 # File origin: https://github.com/Arrow-air/tf-github/tree/main/src/templates/rust-all/Makefile.tftpl
 
-DOCKER_NAME := arrow-lib-template-rust
+DOCKER_NAME := arrow-lib-router
 
 # Combined targets
 
@@ -11,6 +11,7 @@ all: test build release rust-publish
 build: rust-build
 
 release: rust-release
+publish: rust-publish
 test: rust-test-all cspell-test toml-test python-test md-test-links editorconfig-test
 tidy: rust-tidy toml-tidy python-tidy
 

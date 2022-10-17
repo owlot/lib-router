@@ -11,9 +11,8 @@ all: test build release rust-publish
 build: rust-build
 
 release: rust-release
-publish: rust-publish
 test: rust-test-all cspell-test toml-test python-test md-test-links editorconfig-test
-tidy: rust-tidy toml-tidy python-tidy
+tidy: rust-tidy toml-tidy python-tidy editorconfig-tidy
 
 include .make/base.mk
 include .make/cspell.mk
